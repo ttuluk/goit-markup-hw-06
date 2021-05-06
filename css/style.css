@@ -654,6 +654,38 @@ img {
   transition: fill var(--animation);
 }
 
+.footer-submit {
+  display: flex;
+  flex-direction: row;
+  width: 570px;
+  margin-left: 70px;
+  align-items: flex-end;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.footer-mail input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: inherit;
+  margin-top: 20px;
+  padding: 15px;
+}
+.footer-submit-button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-text-color);
+  color: var(--primary-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  text-align: center;
+}
+
 /*сss для портфолио*/
 .container .filter-list {
   display: flex;
