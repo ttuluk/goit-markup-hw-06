@@ -57,21 +57,35 @@
                     </svg></button>
                 <form class="form">
                     <div class="form-group" role="group" aria-labelby="contact-details-head">
-                        <b id="contact-details-head">Оставьте свои данные, мы вам перезвоним</b>
-                        <label for="name">Имя</label>
-                            <input type="text" name="name" id="name" />
+                        <b class="form-title" id="contact-details-head">Оставьте свои данные, мы вам перезвоним</b>
                         
-                        <label for="tel">Телефон</label>
-                            <input type="tel" name="tel" id="tel" />
+                        <div class="form-field">
+                        <label class="form-label" for="name">Имя</label>
+                        <input class="form-input" type="text" name="name" id="name" />
+                        </div>
+
+                        <div class="form-field">
+                        <label class="form-label" for="tel">Телефон</label>
+                        <input class="form-input" type="tel" name="tel" id="tel" />
+                        </div>
+
+                        <div class="form-field">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="email" name="email" id="email"/>
+                        </div>
                         
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email"/>
+                        <div class="form-field">
+                        <label class="form-label" for="coments">Комментарий</label>
+                        <textarea class="form-coments form-input" name="coments" rows="5" id="coments" placeholder="Введите текст"></textarea>
+                        </div>
 
-                        <label for="coments">Комментарий</label>
-                        <textarea name="coments" rows="5" id="coments"></textarea>
-
+                        <div class="form-field">
+                            <input type="checkbox" name="" id="policy">
+                            <label for="policy">Соглашаюсь с рассылкой и принимаю <a class="link" href="">Условия договора</a></label>
+                        </div>
                     </div>
-                    <button type="submit">Отправить</button>
+
+                    <button class="button form-button" type="submit">Отправить</button>
                 </div>
                 </form>
                 
