@@ -261,7 +261,7 @@ p {
 
   min-width: 528px;
   min-height: 581px;
-
+  padding: 40px;
   background-color: var(--primary-bg-color);
 
   transform: translate(50%, -50%) scale(1);
@@ -270,11 +270,9 @@ p {
 
 .close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   padding: 0;
-  margin-top: 8px;
-  margin-right: 8px;
   width: 30px;
   height: 30px;
   text-align: center;
@@ -298,7 +296,6 @@ p {
   color: var(--title-text-color);
   display: flex;
   flex-direction: column;
-  padding: 40px;
 }
 .form-group {
   display: flex;
@@ -327,7 +324,7 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 48px;
-  transition: border var(--animation), fill var(--animation);
+  transition: border var(--animation);
 }
 .form-group .form-field .form-label {
   display: flex;
@@ -340,8 +337,10 @@ p {
 }
 
 .form-field textarea.form-coments {
-  height: 120px;
+  min-height: 120px;
+  max-width: 448px;
   display: flex;
+  padding: 16px;
 }
 .form-icon {
   position: absolute;
@@ -351,6 +350,8 @@ p {
   height: 18px;
   background-position: center;
   transform: translateY(50%);
+  fill: inherit;
+  transition: fill var(--animation);
 }
 
 .form-icon-svg {
@@ -359,13 +360,16 @@ p {
 }
 
 .form-input:focus {
-  border-color: var(--accent-text-color);
+  border: 1px solid var(--accent-text-color);
+  fill: var(--title-text-color);
   outline: none;
   cursor: pointer;
+  transition: border var(--animation);
 }
 
 .form-input:focus + .form-icon {
   fill: var(--accent-text-color);
+  transition: fill var(--animation);
 }
 .form-field .form-coments {
   padding-left: 16px;
@@ -434,7 +438,7 @@ button {
   font: inherit;
   color: inherit;
   padding: 10px 30px;
-
+  letter-spacing: 0.06em;
   transition: background-color var(--animation) color var(--animation)
     box-shadow var(--animation);
 }
@@ -446,7 +450,8 @@ button {
   margin-top: 30px;
   font-weight: 900;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
   text-align: center;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -749,6 +754,7 @@ img {
   display: flex;
   flex-wrap: nowrap;
   align-items: baseline;
+  justify-content: space-between;
 }
 .address-box {
   display: flex;
@@ -774,12 +780,15 @@ img {
 
   transition: fill var(--animation);
 }
-
+.form-submit {
+  display: flex;
+}
 .footer-submit {
   display: flex;
   flex-direction: row;
   width: 570px;
   margin-left: 70px;
+
   align-items: flex-end;
   font-size: 14px;
   line-height: 1.36;
@@ -789,22 +798,36 @@ img {
 .footer-mail input {
   width: 358px;
   height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  background-color: inherit;
   margin-top: 20px;
   padding: 15px;
+  background-color: inherit;
+  color: var(--primary-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .footer-submit-button {
+  position: relative;
   width: 200px;
   height: 50px;
+  margin-right: 10px;
   background-color: var(--accent-text-color);
   color: var(--primary-bg-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   text-align: center;
+  align-items: flex-start;
+}
+.button-send-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.button-send-svg {
+  fill: var(--primary-bg-color);
 }
 
 /*сss для портфолио*/
